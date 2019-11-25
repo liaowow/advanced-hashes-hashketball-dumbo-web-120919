@@ -166,9 +166,6 @@ def num_points_scored(name)
     end
   i += 1
   end
-
-
-
 end
 
 
