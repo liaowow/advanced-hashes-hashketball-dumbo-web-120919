@@ -358,5 +358,6 @@ def player_with_longest_name
   else
     return away_longest_name
   end
-  
 end
+
+def 
