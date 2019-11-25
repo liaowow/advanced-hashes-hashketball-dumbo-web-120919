@@ -383,6 +383,7 @@ def long_name_steals_a_ton?
     if arr_index[:steals] > most_steals
       away_most_steals = arr_index[:steals]
       away_steals_player = arr_index[:player_name]
+    end
   end
   
   if home_most_steals > away_most_steals
