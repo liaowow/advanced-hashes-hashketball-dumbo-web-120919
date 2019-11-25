@@ -142,8 +142,32 @@ def game_hash
 end
 
 def num_points_scored(name)
+
+  home_players_arr = game_hash[:home][:players]
+  away_players_arr = game_hash[:away][:players]
   
-  game_hash
+  i = 0
+  while i < home_players_arr.length do
+  # loop over home team's players names, see if the name exists...
+    #...if so, return points of that player
+    if home_players_arr[i][:player_name] == name
+      return home_players_arr[i][:points]
+    else
+      # ...if not, loop over away team's player names, do the same
+      j = 0
+      while j < away_players_arr.length do
+      
+        if away_players_arr[j][:player_name] == name
+          return away_players_arr[j][:points]
+        end
+      j += 1
+      end
+    
+    end
+  i += 1
+  end
+
+
 
 end
 
