@@ -334,4 +334,9 @@ def winning_team
   end
 end
 
-def 
+def player_with_longest_name
+  longest_name = ""
+  
+  
+  
+end
