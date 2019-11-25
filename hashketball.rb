@@ -380,7 +380,7 @@ def long_name_steals_a_ton?
   end
   
   away_players_arr.each do |arr_index|
-    if arr_index[:steals] > most_steals
+    if arr_index[:steals] > away_most_steals
       away_most_steals = arr_index[:steals]
       away_steals_player = arr_index[:player_name]
     end
