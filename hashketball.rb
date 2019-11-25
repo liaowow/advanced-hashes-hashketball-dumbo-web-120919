@@ -218,7 +218,15 @@ def player_numbers(team)
 end
 
 def player_stats(name)
+  player_hash = {}
   
+  game_hash[:home][:players].each do |arr_index|
+    if arr_index[:player_name] == name
+      player_hash
+    end
+  end
+  
+  player_hash
 end
 
 
