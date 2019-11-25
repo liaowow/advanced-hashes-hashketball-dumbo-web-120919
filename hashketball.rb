@@ -353,7 +353,7 @@ def player_with_longest_name
     end
   end
   
-  if home_longest_name.length > away_longest_name
+  if home_longest_name.length > away_longest_name.length
     return home_longest_name
   else
     return away_longest_name
