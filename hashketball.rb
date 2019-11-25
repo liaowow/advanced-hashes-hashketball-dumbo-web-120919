@@ -310,6 +310,5 @@ def most_points_scored
   else
     return away_biggest_player
   end
-  
 end
 
