@@ -335,8 +335,14 @@ def winning_team
 end
 
 def player_with_longest_name
-  longest_name = ""
+  home_longest_name = ""
+  away_longest_name = ""
   
+  home_players_arr = game_hash[:home][:players]
+  away_players_arr = game_hash[:away][:players]
   
+  home_players_arr.each do |arr_index|
+    
+  end
   
 end
