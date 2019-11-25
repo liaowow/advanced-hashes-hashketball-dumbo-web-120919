@@ -179,11 +179,10 @@ def shoe_sizes(name)
       away_players_arr.each do |arr_index|
         if arr_index[:player_name] == name
           return arr_index[:shoe]
+        end
       end
-      
     end
   end
-
 end
 
 
