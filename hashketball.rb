@@ -342,7 +342,21 @@ def player_with_longest_name
   away_players_arr = game_hash[:away][:players]
   
   home_players_arr.each do |arr_index|
-    
+    if arr_index[:player_name].length > home_longest_name.length
+      home_longest_name = arr_index[:player_name]
+    end
+  end
+  
+  away_players_arr.each do |arr_index|
+    if arr_index[:player_name].length > away_longest_name.length
+      away_longest_name = arr_index[:player_name]
+    end
+  end
+  
+  if home_longest_name.length > away_longest_name
+    return home_longest_name
+  else
+    return away_longest_name
   end
   
 end
