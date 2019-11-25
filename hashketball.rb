@@ -282,6 +282,9 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
+  biggest_points = 0
+  
+  game_hash[:home][:players].
   
 end
 
