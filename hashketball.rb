@@ -204,6 +204,16 @@ end
 def player_numbers(team)
   num_arr = []
   
+  if game_hash[:home][:team_name] == team
+    game_hash[:home][:players].each do |arr_index|
+      num_arr << arr_index[:number]
+    end
+  else
+    game_hash[:away][:players].each do |arr_index|
+      num_arr << arr_index[:number]
+    end
+  end
+  
   num_arr
 end
 
