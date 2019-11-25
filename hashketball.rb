@@ -392,5 +392,6 @@ def long_name_steals_a_ton?
   else
     if away_most_steals == long_name_player
       return true
+    end
   end
 end
