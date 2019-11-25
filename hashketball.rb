@@ -253,15 +253,31 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-  big_shoe_size = 0
+  home_big_shoe_size = 0
+  away_big_shoe_size = 0
+  
+  home_big_shoe_rebound = 0
+  away_big_shoe_rebound = 0
   
   game_hash[:home][:players].each do |arr_index|
-    if arr_index[:shoe] > big_shoe_size
-      big_shoe_size = arr_index[:shoe]
+    if arr_index[:shoe] > home_big_shoe_size
+      home_big_shoe_size = arr_index[:shoe]
+      home_big_shoe_rebound = arr_index[:rebounds]
     end
   end
   
-  game_hash[:away][:players]
+  game_hash[:away][:players].each do |arr_index|
+    if arr_index[:shoe] > away_big_shoe_size
+     away_big_shoe_size = arr_index[:shoe]
+     away_big_shoe_rebound = arr_index[:rebounds]
+    end
+  end
   
+  #now we have biggest shoe sizes from each team
+  if home_big_shoe_size > away_big_shoe_size
+    return home_big_shoe_rebound
+  else
+    return away_big_shoe_rebound
+  end
 end
 
