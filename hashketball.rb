@@ -282,13 +282,33 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-  biggest_points = 0
+  home_biggest_points = 0
+  away_biggest_points = 0
+  
+  home_biggest_player = ""
+  away_biggest_player = ""
   
   home_players_arr = game_hash[:home][:players]
   away_players_arr = game_hash[:away][:players]
   
   home_players_arr.each do |arr_index|
-    
+    if arr_index[:points] > home_biggest_points
+      home_biggest_points = arr_index[:points]
+      home_biggest_player = arr_index[:player_name]
+    end
+  end
+  
+  away_players_arr.each do |arr_index|
+    if arr_index[:points] > away_biggest_points
+      away_biggest_points = arr_index[:points]
+      away_biggest_player = arr_index[:player_name]
+    end
+  end
+  
+  if home_biggest_points > away_biggest_points
+    return home_biggest_player
+  else
+    return away_biggest_player
   end
   
 end
