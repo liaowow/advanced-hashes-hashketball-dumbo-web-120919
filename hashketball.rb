@@ -284,7 +284,12 @@ end
 def most_points_scored
   biggest_points = 0
   
-  game_hash[:home][:players].
+  home_players_arr = game_hash[:home][:players]
+  away_players_arr = game_hash[:away][:players]
+  
+  home_players_arr.each do |arr_index|
+    
+  end
   
 end
 
