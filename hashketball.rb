@@ -201,7 +201,11 @@ def team_names
   team_name_arr
 end
 
-
+def player_numbers(team)
+  num_arr = []
+  
+  num_arr
+end
 
 
 
