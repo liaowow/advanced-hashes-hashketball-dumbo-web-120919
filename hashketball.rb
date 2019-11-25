@@ -156,13 +156,11 @@ def num_points_scored(name)
       # ...if not, loop over away team's player names, do the same
       j = 0
       while j < away_players_arr.length do
-      
         if away_players_arr[j][:player_name] == name
           return away_players_arr[j][:points]
         end
       j += 1
       end
-    
     end
   i += 1
   end
