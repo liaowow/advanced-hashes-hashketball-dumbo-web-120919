@@ -253,6 +253,15 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+  big_shoe_size = 0
+  
+  game_hash[:home][:players].each do |arr_index|
+    if arr_index[:shoe] > big_shoe_size
+      big_shoe_size = arr_index[:shoe]
+    end
+  end
+  
+  game_hash[:away][:players]
   
 end
 
