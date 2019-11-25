@@ -315,4 +315,22 @@ end
 def winning_team
   home_points = 0
   away_points = 0
+  
+  home_players_arr = game_hash[:home][:players]
+  away_players_arr = game_hash[:away][:players]
+  
+  home_players_arr.each do |arr_index|
+    home_points += arr_index[:points]
+  end
+  
+  away_players_arr.each do |arr_index|
+    away_points += arr_index[:points]
+  end
+  
+  if home_points > away_points
+    return game_hash[:home][:team_name]
+  else
+    return game_hash[:away][:team_name]
+  end
+  
 end
