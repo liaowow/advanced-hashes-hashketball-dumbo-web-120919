@@ -223,7 +223,8 @@ def player_stats(name)
   game_hash[:home][:players].each do |arr_index|
     if arr_index[:player_name] == name
       player_hash = {
-        number: arr_index[:number]
+        :number => arr_index[:number],
+        :shoe => arr_index[:shoe],
         
       }
     end
