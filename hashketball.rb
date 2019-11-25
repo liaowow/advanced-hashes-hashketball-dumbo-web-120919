@@ -225,8 +225,28 @@ def player_stats(name)
       player_hash = {
         :number => arr_index[:number],
         :shoe => arr_index[:shoe],
-        
+        :points => arr_index[:points],
+        :rebounds => arr_index[:rebounds],
+        :assists => arr_index[:assists,
+        :steals => arr_index[:steals],
+        :blocks => arr_index[:blocks],
+        :slam_dunks => arr_index[:slam_dunks]
       }
+    else
+      game_hash[:away][:players].each do |arr_index|
+        if arr_index[:player_name] == name
+            player_hash = {
+              :number => arr_index[:number],
+              :shoe => arr_index[:shoe],
+              :points => arr_index[:points],
+              :rebounds => arr_index[:rebounds],
+              :assists => arr_index[:assists,
+              :steals => arr_index[:steals],
+              :blocks => arr_index[:blocks],
+              :slam_dunks => arr_index[:slam_dunks]
+            }
+        end
+      end
     end
   end
   
