@@ -227,7 +227,7 @@ def player_stats(name)
         :shoe => arr_index[:shoe],
         :points => arr_index[:points],
         :rebounds => arr_index[:rebounds],
-        :assists => arr_index[:assists,
+        :assists => arr_index[:assists],
         :steals => arr_index[:steals],
         :blocks => arr_index[:blocks],
         :slam_dunks => arr_index[:slam_dunks]
@@ -240,7 +240,7 @@ def player_stats(name)
               :shoe => arr_index[:shoe],
               :points => arr_index[:points],
               :rebounds => arr_index[:rebounds],
-              :assists => arr_index[:assists,
+              :assists => arr_index[:assists],
               :steals => arr_index[:steals],
               :blocks => arr_index[:blocks],
               :slam_dunks => arr_index[:slam_dunks]
